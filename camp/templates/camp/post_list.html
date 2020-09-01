@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Django Girls blog</title>
+     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">강릉 솔향 캠핑장</a></h1>
+        </div>
+
+
+<table style="margin-left: auto; margin-right: auto;"  class="table table-striped">
+ <thead>
+   <tr>
+      <th style="text-align: center;">Date</th>
+      <th style="text-align: center;">요금표</th>
+      <th style="text-align: center;">A_Site</th>
+      <th style="text-align: center;">B_Site</th>
+      <th style="text-align: center;">C_Site</th>
+      <th style="text-align: center;">D_Site</th>
+      <th style="text-align: center;">E_Site</th>
+   </tr>
+ </thead>
+ <tbody>
+	 {% for post in posts %}
+   <tr>
+	   <td style="text-align: center;">{{ post.camdate }}</td>
+	   <td style="text-align: center;">{{ post.cametc }}</td>
+	   <td style="text-align: center;">{{ post.asite  }}</td>
+	   <td style="text-align: center;">{{ post.bsite  }}</td>
+	   <td style="text-align: center;">{{ post.csite  }}</td>
+	   <td style="text-align: center;">{{ post.dsite  }}</td>
+	   <td style="text-align: center;">{{ post.esite  }}</td>
+   </tr>
+   {% endfor %}
+ </tbody> 
+
+</table>
+
+
+    </body>

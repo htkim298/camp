@@ -15,8 +15,12 @@ class SolViewData(models.Model):
     dsite = models.IntegerField()
     esite = models.IntegerField()
 
-
     class Meta:
         managed = False
         db_table = "solcamp"
 
+class Main(models.Model):
+    title = models.CharField(max_length=200)
+
+    def __str__(self):
+    	return self.title

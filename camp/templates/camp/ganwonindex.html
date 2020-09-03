@@ -39,90 +39,181 @@
 
 <main role="main">
 
-  <section class="jumbotron text-center">
-    <div class="container">
-      <h1>캠핑 예약 현황</h1>
-      <p class="lead text-muted">실시간 캠핑 현황이 표시됩니다.</p>
-      <!-- <p>
-        <a href="#" class="btn btn-primary my-2">Main call to action</a>
-        <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-      </p> -->
-    </div>
-  </section>
-
   <div class="album py-5 bg-light">
     <div class="container">
 
       <div class="row">
-        <div class="col-md-4">
+        <!-- <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <a href="/ganwonindex">
+            <a href="/solcamp">
             			<div class="card card-inverse card-gradient-center card-text-middle text-center ">
-            				<!-- Image -->
-                    <img alt="Photo of sunset" class="card-img-top" src="https://cdn.pixabay.com/photo/2018/04/20/12/19/lake-3335863__340.jpg" width="100%" height="225" > </img>
-            				<!-- <img alt="Photo of sunset" class="card-img-top" src="http://placekitten.com/380/238/"> -->
-            				<!-- Text Overlay -->
+                    <img alt="Photo of sunset" class="card-img-top" src="https://cdn.pixabay.com/photo/2017/06/27/07/51/gangneung-2446570__340.jpg" width="100%" height="225" > </img>
             				<div class="card-img-overlay">
-            					<h4 class="card-title" style="color:black;">우리 놀러 가자!</h4>
-                      <h1 class="card-title" style="color:black;">강원도</h1>
+            					<h4 class="card-title" style="color:black;">우리 바다 가자!</h4>
+                      <h1 class="card-title" style="color:black;">강릉솔향기캠핑장</h1>
             				</div>
             			</div>
             </a>
-            <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
-            <!-- <div class="card-body">
-              <p class="card-text">강릉 캠핑장</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div> -->
           </div>
-        </div>
-        <div class="col-md-4">
+        </div> -->
+
+            <div class="tile">
+                <div class="wrapper">
+                    <div class="header">강릉솔향기캠핑장</div>
+
+                    <div class="banner-img">
+                        <a href="https://camping.gtdc.or.kr/DZ_reservation/reserCamping.php?xch=reservation&xid=camping_reservation">
+                          <img src="https://cdn.pixabay.com/photo/2017/06/27/07/51/gangneung-2446570__340.jpg" alt="Image 1">
+                        </a>
+                    </div>
+                    <div class="dates">
+                      {% for day in day_list %}
+                        <div class="start">
+                            <strong>평일</strong> {{ day }}
+                            <span></span>
+                        </div>
+                        {% endfor %}
+                        {% for week in week_list %}
+                        <div class="ends">
+                            <strong>주말</strong> {{ week }}
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                    <div class="stats">
+                      {% for asite in asite_list %}
+                        <div>
+                            <strong>A-Site</strong> {{ asite }}
+                        </div>
+                      {% endfor %}
+                      {% for bsite in bsite_list %}
+                        <div>
+                            <strong>B-Site</strong> {{ bsite }}
+                        </div>
+                      {% endfor %}
+                      {% for csite in csite_list %}
+                        <div>
+                            <strong>C-Site</strong> {{ csite }}
+                        </div>
+                      {% endfor %}
+
+                    </div>
+                    <div class="stats">
+                      {% for dsite in dsite_list %}
+                        <div>
+                            <strong>D-Site</strong> {{ dsite }}
+                        </div>
+                      {% endfor %}
+                      {% for esite in esite_list %}
+                        <div>
+                            <strong>E-Site</strong> {{ esite }}
+                        </div>
+                      {% endfor %}
+                        <!-- <div>
+                            <strong>C-Site</strong> 182
+                        </div> -->
+                    </div>
+                    <!-- <div class="stats">
+                        <div>
+                            <strong>INVITED</strong> 3098
+                        </div>
+                        <div>
+                            <strong>JOINED</strong> 562
+                        </div>
+                        <div>
+                            <strong>DECLINED</strong> 182
+                        </div>
+                    </div> -->
+                    <!-- <div class="footer">
+                        <a href="#" class="Cbtn Cbtn-primary">View</a>
+                        <a href="#" class="Cbtn Cbtn-danger">Delete</a>
+                    </div> -->
+                </div>
+            </div>
+
+
+
+            <div class="tile">
+                <div class="wrapper">
+                    <div class="header">정동진해돋이캠핑장</div>
+
+                    <div class="banner-img">
+                        <img src="https://cdn.pixabay.com/photo/2015/08/16/04/31/sea-890602__340.jpg" alt="Image 1">
+                    </div>
+
+                    <div class="dates">
+                        <div class="start">
+                            <strong>평일</strong> 13
+                            <span></span>
+                        </div>
+                        <div class="ends">
+                            <strong>주말</strong> 11
+                        </div>
+                    </div>
+                    <div class="stats">
+
+                        <div>
+                            <strong>A-Site</strong> 16
+                        </div>
+                        <div>
+                            <strong>B-Site</strong> 62
+                        </div>
+
+                        <div>
+                            <strong>C-Site</strong> 82
+                        </div>
+                    </div>
+                    <div class="stats">
+                        <div>
+                            <strong>D-Site</strong> 98
+                        </div>
+                        <div>
+                            <strong>E-Site</strong> 62
+                        </div>
+                        <!-- <div>
+                            <strong>C-Site</strong> 182
+                        </div> -->
+                    </div>
+                    <!-- <div class="stats">
+                        <div>
+                            <strong>INVITED</strong> 3098
+                        </div>
+                        <div>
+                            <strong>JOINED</strong> 562
+                        </div>
+                        <div>
+                            <strong>DECLINED</strong> 182
+                        </div>
+                    </div> -->
+                    <!-- <div class="footer">
+                        <a href="#" class="Cbtn Cbtn-primary">View</a>
+                        <a href="#" class="Cbtn Cbtn-danger">Delete</a>
+                    </div> -->
+                </div>
+            </div>
+
+        <!-- <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
             <a href="http://www.google.com">
-
             <div class="card card-inverse card-gradient-center card-text-middle text-center ">
-              <!-- Image -->
                 <img alt="Photo of sunset" class="card-img-top" src="https://cdn.pixabay.com/photo/2017/10/09/02/45/korea-2832270_960_720.jpg" > </img>
-
-              <!-- <img alt="Photo of sunset" class="card-img-top" src="http://placekitten.com/380/238/"> -->
-              <!-- Text Overlay -->
               <div class="card-img-overlay">
                 <h4 class="card-title" style="color:white;">여행자들이 추천하는 경기도 그곳!</h4>
                 <h1 class="card-title" style="color:white;">경기도</h1>
               </div>
             </div>
           </a>
-
-            <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
-            <!-- <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div> -->
-          </div>
+        </div>
         </div>
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
             <div class="card card-inverse card-gradient-center card-text-middle text-center ">
-              <!-- Image -->
               <img alt="Photo of sunset" class="card-img-top" src="https://cdn.pixabay.com/photo/2020/08/08/22/58/flowers-5474147_960_720.jpg" > </img>
-              <!-- <img alt="Photo of sunset" class="card-img-top" src="http://placekitten.com/380/238/"> -->
-              <!-- Text Overlay -->
               <div class="card-img-overlay">
                 <h4 class="card-title" style="color:white;">찬란한 신라 천년의 불교문화와 신비한 그곳!</h4>
                 <h1 class="card-title" style="color:white;">경상북도</h1>
               </div>
-            </div>
+            </div> -->
 
             <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
             <!-- <div class="card-body">
@@ -137,6 +228,7 @@
             </div> -->
           </div>
         </div>
+
           <!--      <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
             <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
